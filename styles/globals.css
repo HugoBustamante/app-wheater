@@ -1,0 +1,94 @@
+:root {
+  --day: #fffcf7;
+  --dimday: #e0e0e0;
+  --orange: #ffb080;
+  --red: #fb1970;
+  --night: #081b25;
+  --dimnight: #283b45;
+  --blue: #28aefd;
+  --purple: #ca4bf1;
+  --darkpurple: #57438e;
+  --gray: #9e9e9e;
+  --white: #ffffff;
+}
+
+body {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body.day {
+  background-color: var(--day);
+  color: var(--night);
+}
+
+body.night {
+  background-color: var(--night);
+  color: var(--day);
+}
+
+body.day .menu {
+  background-color: var(--day);
+}
+
+body.night .menu {
+  background-color: var(--night);
+}
+
+i {
+  font-style: normal;
+}
+
+h2 {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.icon:before {
+  font-family: 'MeteoconsRegular';
+  content: attr(data-icon);
+}
+
+/* Menu */
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 12vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu a:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+body.day #home-button,
+body.day #calendar-button,
+body.day #favorites-button,
+body.day #search-button {
+  color: var(--dimnight);
+}
+
+body.night #home-button,
+body.night #calendar-button,
+body.night #favorites-button,
+body.night #search-button {
+  color: var(--dimday);
+}

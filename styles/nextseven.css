@@ -1,0 +1,31 @@
+/* Current data */
+.day__container {
+  margin: 0 0 1.5rem;
+}
+
+.day__data {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.day__data div {
+  display: flex;
+  align-items: center;
+}
+
+.day__data i {
+  font-size: 2rem;
+  color: var(--red);
+  background: -webkit-linear-gradient(-45deg, var(--orange), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.day__data p {
+  margin: 0 0 0 0.5rem;
+}
+
+.lowest-temp {
+  color: var(--gray);
+}

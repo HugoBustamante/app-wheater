@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/styles/icons-weather.css" />
+    <link rel="stylesheet" href="/styles/icons-general.css" />
+    <link rel="stylesheet" href="/styles/globals.css" />
+    <link rel="stylesheet" href="/styles/search.css" />
+    <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="/styles/nextseven.css" />
+    <link rel="stylesheet" href="/styles/favorites.css" />
+    <link rel="stylesheet" href="/styles/mediaqueries.css" />
+    <script src="/src/index.js" type="module" defer></script>
+    <title>Weather App</title>
+  </head>
+  <body class="day">
+    <section class="search" id="search">
+      <form class="search-bar">
+        <input class="search-input" type="text" placeholder="Search" />
+        <button type="submit" class="icon-search"></button>
+      </form>
+      <p class="search-results"></p>
+    </section>
+    <section class="main-data" id="main-data">
+      <div>
+        <p class="main-data__city"></p>
+        <p class="main-data__temp"></p>
+        <p class="main-data__feelslike"></p>
+        <i class="main-data__heart icon-heart on"></i>
+      </div>
+      <i class="main-data__icon icon"></i>
+    </section>
+    <section class="complement-data">
+      <div class="complement-data__indicator">
+        <p class="complement-data__indicator--title">Sunrise</p>
+        <p class="complement-data__indicator--value" id="sunrise"></p>
+      </div>
+      <div class="complement-data__indicator">
+        <p class="complement-data__indicator--title">UV</p>
+        <p class="complement-data__indicator--value" id="uv"></p>
+      </div>
+      <div class="complement-data__indicator">
+        <p class="complement-data__indicator--title">Wind</p>
+        <p class="complement-data__indicator--value" id="wind"></p>
+      </div>
+      <div class="complement-data__indicator">
+        <p class="complement-data__indicator--title">Sunset</p>
+        <p class="complement-data__indicator--value" id="sunset"></p>
+      </div>
+      <div class="complement-data__indicator">
+        <p class="complement-data__indicator--title">Humidity</p>
+        <p class="complement-data__indicator--value" id="humidity"></p>
+      </div>
+      <div class="complement-data__indicator">
+        <p class="complement-data__indicator--title">Pressure</p>
+        <p class="complement-data__indicator--value" id="pressure"></p>
+      </div>
+    </section>
+    <section class="hourly-data">
+      <h2>Next 24 hours</h2>
+      <div class="hourly-data__content"></div>
+    </section>
+    <section id="next-seven">
+      <h2>Next 7 days</h2>
+      <div class="day__container"></div>
+    </section>
+    <section class="favorite-cities" id="favorite-cities">
+      <h2>Favorite Cities</h2>
+      <div class="favorites__container"></div>
+    </section>
+    <section class="menu">
+      <a href="#main-data"
+        ><i id="home-button" class="menu__item icon-home"></i
+      ></a>
+      <a href="#next-seven"
+        ><i id="calendar-button" class="menu__item icon-calendar"></i
+      ></a>
+      <a href="#favorite-cities"
+        ><i id="favorites-button" class="menu__item icon-heart"></i
+      ></a>
+      <a href="#search"
+        ><i id="search-button" class="menu__item icon-search"></i
+      ></a>
+    </section>
+  </body>
+</html>

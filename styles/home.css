@@ -1,0 +1,125 @@
+/* Main data section */
+.main-data {
+  padding: 2rem 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-data div {
+  margin-left: 1rem;
+}
+
+.main-data__city {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.main-data__temp {
+  font-size: 4rem;
+  margin: 0.2rem 0;
+}
+
+.main-data__feelslike {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.main-data__icon {
+  font-size: 10rem;
+}
+
+.main-data__heart {
+  display: block;
+  margin-top: 1rem;
+}
+
+.main-data__heart:hover {
+  cursor: pointer;
+}
+
+.main-data__heart.on {
+  color: var(--red);
+}
+
+.main-data__heart.off {
+  color: var(--gray);
+}
+
+body.day .main-data__icon,
+.hourly-data__content--icon {
+  color: var(--red);
+  background: -webkit-linear-gradient(-45deg, var(--orange), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.night .main-data__icon {
+  color: var(--red);
+  background: -webkit-linear-gradient(
+    -45deg,
+    var(--blue),
+    var(--darkpurple),
+    var(--purple)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.day .complement-data__indicator--title {
+  color: var(--red);
+}
+
+body.night .complement-data__indicator--title {
+  color: var(--blue);
+}
+
+/* Hourly data section */
+.hourly-data__content {
+  margin: 1rem 0;
+  display: flex;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.hourly-data__content--block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.7rem;
+}
+
+.hourly-data__content--block:first-child {
+  margin-left: 0;
+}
+
+.hourly-data__content--hour {
+  font-size: 0.6rem;
+  margin: 0 0 0.3rem;
+  width: max-content;
+}
+
+.hourly-data__content--icon {
+  font-size: 1.5rem;
+}
+
+.hourly-data__content--temp {
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+}
+
+/* Complement data section */
+.complement-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.complement-data__indicator--title {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.complement-data__indicator--value {
+  font-weight: bold;
+  margin: 0.5rem 0 0.8rem;
+}
